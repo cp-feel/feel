@@ -1,0 +1,56 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model document {
+  /// Field referred in an index, but found no data to define the type.
+  id Json?  @id @unique(map: "document_idx") @map("_id")
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+}
+
+model organization {
+  /// Field referred in an index, but found no data to define the type.
+  id Json?  @id @unique(map: "organization_idx") @map("_id")
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+}
+
+model post {
+  /// Field referred in an index, but found no data to define the type.
+  id Json?  @id @unique(map: "post_idx") @map("_id")
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+}
+
+model project {
+  /// Field referred in an index, but found no data to define the type.
+  id Json?  @id @unique(map: "project_idx") @map("_id")
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+}
+
+model task {
+  /// Field referred in an index, but found no data to define the type.
+  id Json?  @id @unique(map: "task_idx") @map("_id")
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+}
+
+model team {
+  /// Field referred in an index, but found no data to define the type.
+  id Json?  @id @unique(map: "team_idx") @map("_id")
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+}
+
+model track {
+  /// Field referred in an index, but found no data to define the type.
+  id Json?  @id @unique(map: "track_idx") @map("_id")
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+}
+
+model user {
+  /// Field referred in an index, but found no data to define the type.
+  id Json?  @id @unique(map: "user_idx") @map("_id")
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+}
