@@ -2,9 +2,9 @@
   "name": "backend_service",
   "version": "0.1.0",
   "description": "",
-  "main": "./src/app.ts",
+  "main": "app.ts",
   "scripts": {
-    "dev": "npx ts-node src/app.ts",
+    "dev": "npx ts-node app.ts",
     "build": "tsc"
   },
   "keywords": [],
